@@ -1,0 +1,13 @@
+# Ignore environment variables / secrets
+.env
+*.env
+
+# Ignore virtual environments
+.venv/
+venv/
+env/
+
+# Ignore Python cache & downloaded weights
+__pycache__/
+*.pyc
+Local_llm/
