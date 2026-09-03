@@ -59,18 +59,19 @@ input_lenght = st.selectbox(
 
 user_template = PromptTemplate(
     template = """
-    Please summarize the reseach paper titled '{paper_input}' with the following specifications :
-    Explanation Style : {output_tone}
-    Explanation Length : {input_lenght}
-    1. Mathematical Details :
-        - Include relevent mathematical equations if present in the paper
-        - Explain the mathematical concepts using simple, intuitive code snippets, where applicable
-    2. Analogies :
-        - Use relatable analogies to simplify complex ideas
-    If certain information is not avalible in the paper, respond with : "Insufficient information avalible" instead of gussing.
-    Ensure the summary is clear, accurate, and aligned with the provided style and lenght.
-""",
-input_variables=['paper_input', 'output_tone','input_lenght']
+        Please summarize the reseach paper titled '{paper_input}' with the following specifications :
+        Explanation Style : {output_tone}
+        Explanation Length : {input_lenght}
+        1. Mathematical Details :
+            - Include relevent mathematical equations if present in the paper
+            - Explain the mathematical concepts using simple, intuitive code snippets, where applicable
+        2. Analogies :
+            - Use relatable analogies to simplify complex ideas
+        If certain information is not avalible in the paper, respond with : "Insufficient information avalible" instead of gussing.
+        Ensure the summary is clear, accurate, and aligned with the provided style and lenght.
+    """,
+    input_variables=['paper_input', 'output_tone','input_lenght'],
+    validate_template=True # this will check the format of our templete first so that its a valid templete and nothing is missing in this
 )
 
 user_prompt = user_template.invoke( {
