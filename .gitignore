@@ -11,6 +11,3 @@ env/
 __pycache__/
 *.pyc
 Local_llm/
-
-
-.gitignore
