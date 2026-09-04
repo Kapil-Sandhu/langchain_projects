@@ -1,0 +1,16 @@
+// as we know json is a universal format and any language can read it so when we are working with multiple different 
+// languages like python for backend and javascript for frontend then here we will use json schema instead of pydantic
+
+
+{
+    "title" : "Student",
+    "description" : "Schema about Student Information",
+    "type" : "object",
+    "properties" :{
+        "name" : "string",
+        "age" : "integer",
+        "roll_no" : "integer"
+    },
+    "required" :  ["name"]
+
+}
